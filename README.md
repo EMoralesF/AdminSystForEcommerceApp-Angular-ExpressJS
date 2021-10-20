@@ -1,6 +1,6 @@
 # Demo sistema de administración para aplicación E-Commerce
-Aplicación web desarrollada con Node.js, Angular y MySQL
-Maquetación vía Bootstrap 4
+Aplicación web desarrollada con Node.js, Angular y MySQL.
+Maquetación vía Bootstrap 4.
 
 ## Requisitos:
 * Angular CLI
