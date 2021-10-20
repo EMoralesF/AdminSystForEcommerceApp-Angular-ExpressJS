@@ -1,0 +1,23 @@
+.mat-card {
+  margin: 7px!important;
+  height: 450px;
+}
+
+img {
+  width: 150px;
+  height: auto;
+}
+.contenedor-imagen{
+  padding: 5px;
+  display: inline-block;
+}
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700');
+
+body
+{
+    font-family: 'Roboto', sans-serif;
+}
+a
+{
+    text-decoration: none;
+}

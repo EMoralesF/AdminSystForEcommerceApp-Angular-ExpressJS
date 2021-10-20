@@ -1,0 +1,37 @@
+<p>agregar-user works!</p>
+<mat-card>
+    <h1>Agregar usuario</h1>
+    <p>
+      <mat-form-field>
+        <input matInput [(ngModel)]="usuarioModel.username"
+               type="text"
+               placeholder="Username">
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field>
+        <input matInput [(ngModel)]="usuarioModel.email"
+               type="text"
+               placeholder="Email">
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field>
+        <input matInput [(ngModel)]="usuarioModel.password"
+               type="password"
+               placeholder="Password">
+      </mat-form-field>
+    </p>
+    <p>
+        <mat-form-field>
+          <input matInput [(ngModel)]="usuarioModel.id"
+                 type="number"
+                 placeholder="ID">
+        </mat-form-field>
+      </p>
+    <br>
+    <p>
+      <a (click)="guardar()" mat-raised-button color="primary" style="margin-left: 10px">Guardar</a>
+      <a routerLink="/adminLogin/products" mat-raised-button color="primary" style="margin-left: 10px">Volver</a>
+    </p>
+  </mat-card>

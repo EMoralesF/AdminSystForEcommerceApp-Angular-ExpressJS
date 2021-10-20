@@ -1,0 +1,41 @@
+.contenedor-padre {
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+}
+
+.barra {
+  flex: 0 1 auto;
+  background-color:brown;
+}
+
+.barra a{
+  background-color:#e3f2fd;
+  color:rgb(42,42,42);
+}
+
+.contenido {
+  flex: 1 1 auto;
+  background-color:seashell;
+  width: 100%;
+}
+
+.example-fill-remaining-space {
+  /* This fills the remaining space, by using flexbox.
+     Every toolbar row uses a flexbox row layout. */
+  flex: 1 1 auto;
+}
+h1{
+  text-align: center;
+}
+mat-sidenav{
+  background-color:rgba(52,58,64);
+  color:#fff;
+}
+mat-sidenav a{
+  color:#fff;
+}
+mat-icon{
+  color:#fff;
+}
+

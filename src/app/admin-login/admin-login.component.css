@@ -1,0 +1,59 @@
+.login-container{
+    background-color:seashell;
+    width:100%;
+    height: 100%;
+    padding-left:2.5%;
+    padding-top: 1%;
+}
+h1{
+    color: black;
+    text-align: center;
+}
+.login-form{
+    padding: 5%;
+    background-color: rgb(52,58,64);
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 4px;
+}
+.login-form h3{
+    text-align: center;
+    color: #fff;
+}
+.login-container form{
+    padding: 10%;
+}
+.btnSubmit
+{
+    width: 50%;
+    border-radius: 1rem;
+    padding: 1.5%;
+    border: none;
+    cursor: pointer;
+}
+.login-form .btnSubmit{
+    font-weight: 600;
+    color: #0062cc;
+    background-color: #fff;
+}
+.login-form .ForgetPwd{
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+}
+h1{
+    text-align: center;
+}
+.logged-container{
+    width: 100%;
+    height: 100%;
+    padding:0;
+}
+.logout{
+    background-color:#e3f2fd;
+    color:rgb(42,42,42);
+    margin:1%;
+}
+.logout:hover{
+    background-color:#3f51b5;
+    color:#fff;
+}

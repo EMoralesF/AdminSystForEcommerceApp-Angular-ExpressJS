@@ -1,0 +1,30 @@
+<h1>Administradores</h1>
+<button (click)="navegarAFormulario()" class="add" routerLink="adminLogin/agregarUser" mat-button color="secondary" mat-raised-button>Agregar usuario</button>
+<table class="mat-elevation-z13" *ngIf="listaUsuarios.length>0" mat-table [dataSource]="listaUsuarios">
+    <ng-container matColumnDef="id">
+      <mat-header-cell *matHeaderCellDef>Nombre</mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.id}}</mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="username">
+      <mat-header-cell *matHeaderCellDef>Usuario</mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.username}}</mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="email">
+      <mat-header-cell *matHeaderCellDef>Email</mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.email}}</mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="password">
+        <mat-header-cell *matHeaderCellDef>Eliminar</mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.password}}</mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="borrar">
+        <mat-header-cell *matHeaderCellDef>Borrar</mat-header-cell>
+        <mat-cell *matCellDef="let element">
+          <button (click)="eliminar(element)" mat-icon-button color="warn">
+            <mat-icon>delete</mat-icon>
+          </button>
+        </mat-cell>
+      </ng-container>
+    <mat-header-row *matHeaderRowDef="columnas"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: columnas;"></mat-row>
+  </table>

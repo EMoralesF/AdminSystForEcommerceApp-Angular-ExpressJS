@@ -1,0 +1,32 @@
+<div class="container login-container" *ngIf = '!this.isLogin'>
+    <h1>Acceso al área para administradores:</h1>
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6 login-form">
+            <h3>Formulario de prueba. Anota 'admin3' y 'abcd' respectivamente para acceder a las opciones del administrador.</h3>
+        <form>
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Nombre de usuario *" [(ngModel)]="usuarioAdmin.username" [ngModelOptions]="{standalone: true}"/>
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-control" placeholder="Contraseña *" [(ngModel)]="usuarioAdmin.password" [ngModelOptions]="{standalone: true}"/>
+            </div>
+            <div class="form-group">
+                <input type="submit" class="btnSubmit" value="Login" (click)="logIn()"/>
+            </div>
+            <div class="form-group">
+
+                <a href="#" class="ForgetPwd" value="Login">Forget Password?</a>
+            </div>
+        </form>
+        </div>
+        <div class="col-md-3"></div>
+    </div>
+  </div>
+  <div class="container logged-container" *ngIf = 'this.isLogin'>
+    <app-admin-menu></app-admin-menu>
+    <router-outlet></router-outlet>
+    <button class="logout" mat-raised-button (click)="logOut()">Log-out</button>
+  </div>
+ 
+

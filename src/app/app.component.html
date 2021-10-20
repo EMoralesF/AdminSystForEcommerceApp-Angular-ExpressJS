@@ -1,0 +1,55 @@
+<div class="contenedor-padre">
+  <mat-toolbar class="barra" color="primary">
+    <mat-toolbar-row>
+      <button (click)="cajon.toggle()" mat-icon-button>
+        <mat-icon>menu</mat-icon>
+      </button>
+      <span>
+        &nbsp;|&nbsp;Librería digital Cervantes&nbsp;|&nbsp;
+      </span>
+      <span class="example-fill-remaining-space"></span>
+      <button mat-raised-button [matMenuTriggerFor]="menu">
+        <span style="margin-right: 10px" [matBadge]="productos.length+''" matBadgeOverlap="false"
+              matBadgePosition="below after">Carrito de compras</span>
+      </button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item *ngFor="let p of productos;">{{p.nombre}}  {{p.precio | currency}}</button>
+        <button mat-menu-item >
+          <strong>Total: {{total() | currency}}</strong>
+        </button>
+        <a *ngIf="productos.length > 0" mat-menu-item routerLink="/terminar_compra">
+          <mat-icon>shopping_cart</mat-icon>
+          Terminar compra</a>
+      </mat-menu>
+      <a style="margin-left: 10px" mat-raised-button
+         href="" target="_blank">
+        Ayuda y soporte
+      </a>
+    </mat-toolbar-row>
+  </mat-toolbar>
+  <mat-sidenav-container class="contenido">
+    <mat-sidenav style="min-width: 300px;" #cajon opened mode="side">
+      <mat-nav-list>
+        <p style="margin-left: 4px;">Área administrativa</p>
+        <a mat-list-item routerLink="/adminLogin">
+          <mat-icon>list_alt</mat-icon>
+          &nbsp;Iniciar sesión
+        </a>
+        <mat-divider></mat-divider>
+        <p style="margin-left: 4px;">Área cliente</p>
+        <a mat-list-item routerLink="/tienda">
+          <mat-icon>store</mat-icon>
+          &nbsp;Ver tienda
+        </a>
+        <mat-divider></mat-divider>
+        <a mat-list-item href="" target="_blank">
+          Creado por Evelyn M.
+        </a>
+      </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+    
+  </mat-sidenav-container>
+</div>
